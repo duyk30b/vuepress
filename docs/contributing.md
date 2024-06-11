@@ -1,0 +1,3 @@
+# CONTRIBUTORS
+
+This is the CONTRIBUTORS guide.
