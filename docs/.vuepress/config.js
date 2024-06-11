@@ -31,22 +31,33 @@ export default defineUserConfig({
           children: ["/guide/"],
         },
       ],
-      "/guide/": [
+      "/database/sql/": [
         {
-          title: "Guide",
+          title: "SQL",
+          collapsable: false,
+          children: ["/database/sql/", "/database/sql/transaction"],
+        },
+      ],
+      "/database/mongodb/": [
+        {
+          title: "MongoDb",
           collapsable: false,
           children: [
-            "/guide/",
-            "/guide/getting-started",
-            "/guide/configuration",
+            "/database/mongodb/",
+            "/database/mongodb/backup-restore",
+            "/database/mongodb/replica",
           ],
         },
       ],
-      "/api/": [
+      "/language/javascript/": [
         {
-          title: "API Documentation",
+          title: "Javascript",
           collapsable: false,
-          children: ["/api/", "/api/authentication", "/api/authorization"],
+          children: [
+            "/language/javascript/",
+            "/language/javascript/typescript-decorator",
+            "/language/javascript/typescript-type-interface",
+          ],
         },
       ],
     },
