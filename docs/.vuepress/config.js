@@ -8,15 +8,47 @@ export default defineUserConfig({
     navbar: [
       { text: "Home", link: "/" },
       { text: "Guide", link: "/guide/" },
-      { text: "API", link: "/api/" },
-      { text: "External", link: "https://google.com" },
-    ],
-    sidebar: [
       {
-        title: "Guide",
-        collapsable: false,
-        children: ["/guide/", "/guide/getting-started", "/guide/configuration"],
+        text: "Database",
+        children: [
+          { text: "SQL", link: "/database/sql/" },
+          { text: "MongoDB", link: "/database/mongodb/" },
+        ],
+      },
+      {
+        text: "Language",
+        children: [
+          { text: "Javascript", link: "/language/javascript/" },
+          { text: "HTML-CSS", link: "/language/html-css/" },
+        ],
       },
     ],
+    sidebar: {
+      "/": [
+        {
+          title: "Guide",
+          collapsable: false,
+          children: ["/guide/"],
+        },
+      ],
+      "/guide/": [
+        {
+          title: "Guide",
+          collapsable: false,
+          children: [
+            "/guide/",
+            "/guide/getting-started",
+            "/guide/configuration",
+          ],
+        },
+      ],
+      "/api/": [
+        {
+          title: "API Documentation",
+          collapsable: false,
+          children: ["/api/", "/api/authentication", "/api/authorization"],
+        },
+      ],
+    },
   }),
 });
